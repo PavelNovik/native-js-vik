@@ -26,6 +26,10 @@ const usersObj = {
 
 console.log(usersObj[2])
 
+console.log(usersObj)
+delete usersObj[1]
+console.log(usersObj)
+
 console.log(user.address.city.title)
 console.log(user["address"]["city"]["title"])
 console.log(user1.address.city.title)
