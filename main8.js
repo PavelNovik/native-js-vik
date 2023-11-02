@@ -3,11 +3,22 @@
 
 // export function sum(...nums) {
 function sum(...nums) {
-  console.log(nums);
+  // console.log(typeof arguments);
+  // console.log(nums);
+  // console.log(arguments);
+  // console.log(arguments.length);
+  // console.log(arguments[1]);
+  // console.log(arguments['0']);
   //...здесь пишем код.
   // В return стоит "заглушка", чтоб typescript не ругался
-  return nums.reduce((acc, n) => acc + n, 0);
+  // return nums.reduce((acc, n) => acc + n, 0);
+  let res = 0;
+  for (let a of arguments) {
+    res += a;
+  }
+  return res;
 }
+sum(1, 2, 3, 4, 5);
 
 // console.log(sum(1, 2, 3, 4, 5));
 
@@ -62,7 +73,7 @@ const isEvenIndexSumGreater = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     i % 2 === 0 ? (even += arr[i]) : (odd += arr[i]);
   }
-  console.log(even, odd);
+  // console.log(even, odd);
 };
 // isEvenIndexSumGreater([1, 100, 2, 200]);
 // isEvenIndexSumGreater([100, 1, 200, 2]);
@@ -116,14 +127,20 @@ function getBanknoteList(amountOfMoney) {
   let money = amountOfMoney;
   let res = [];
   const banknotes = [1000, 500, 100, 50, 20, 10, 5, 2, 1];
-  banknotes.map((a) => {
-    for (let i = 0; i < Math.floor(money / a); i++) {
-      res.push(a);
-    }
+  return banknotes.map((a) => {
+    const count = Math.floor(money / a);
     money = money % a;
+    return count;
   });
 
-  return res;
+  // banknotes.map((a) => {
+  //   for (let i = 0; i < Math.floor(money / a); i++) {
+  //     res.push(a);
+  //   }
+  //   money = money % a;
+  // });
+
+  // return res;
 }
 
 console.log(getBanknoteList(2500));
@@ -132,3 +149,4 @@ console.log(getBanknoteList(23));
 // console.log(1 % 3);
 // console.log(3 % 2);
 // console.log(Math.floor(10 / 11));
+// console.log(23 % 500);
