@@ -143,10 +143,63 @@ function getBanknoteList(amountOfMoney) {
   // return res;
 }
 
-console.log(getBanknoteList(2500));
-console.log(getBanknoteList(23));
+// console.log(getBanknoteList(2500));
+// console.log(getBanknoteList(23));
 
 // console.log(1 % 3);
 // console.log(3 % 2);
 // console.log(Math.floor(10 / 11));
 // console.log(23 % 500);
+
+// console.log('console1');
+
+// setTimeout(() => {
+//   console.log('console4');
+// }, 3000);
+
+// console.log('console2');
+
+// setTimeout(() => {
+//   console.log('console3');
+// }, 1000);
+
+// console.log('1');
+
+// setTimeout(() => {
+//   console.log('2');
+// });
+
+// Promise.resolve().then(() => console.log('3'));
+
+// Promise.resolve().then(() =>
+//   setTimeout(() => {
+//     console.log('4');
+//   })
+// );
+// Promise.resolve().then(() => console.log('5'));
+
+// setTimeout(() => {
+//   console.log('6');
+// });
+
+// console.log('7');
+
+async function first() {
+  console.log(9);
+  await Promise.resolve(2).then((r) => console.log(r));
+  console.log(0);
+  await Promise.resolve(3).then((r) => console.log(r));
+}
+
+async function second() {
+  console.log(10);
+  await Promise.resolve(4).then((r) => console.log(r));
+  console.log(11);
+  await Promise.resolve(5).then((r) => console.log(r));
+}
+
+first();
+second();
+
+const promises = Promise.resolve('new Promise');
+promises.then((str) => console.log(str));
