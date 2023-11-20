@@ -1,4 +1,4 @@
-console.log('hi');
+// console.log('hi');
 
 // Promise .then .catch .finally
 
@@ -183,3 +183,25 @@ const delay = (ms) => {
 };
 
 delay(1000).then((res) => console.log(res));
+
+const obj = {
+  option1: 'asd',
+  option2: 'sdadsada',
+  option3: 'asdsadsad',
+  option4: 'safasdfsdfsf',
+};
+console.log(obj);
+
+// obj.foo = 'lorem12';
+setTimeout(() => {
+  obj.extraOption1 = 'lorem12';
+}, 1000);
+
+console.log(obj);
+
+// obj.foo2 = 1234;
+setTimeout(() => {
+  obj.extraOption2 = 1234;
+}, 1000);
+
+console.log(obj);
