@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+// import fetch from 'node-fetch';
 
 // fetch("https://bing.com/query=js")
 //   .then((dataFromBing) => {
@@ -178,22 +178,57 @@ import fetch from 'node-fetch';
 //   console.log(data);
 // });
 
-async function first() {
-  console.log(9);
-  await Promise.resolve(2).then((r) => console.log(r));
-  console.log(0);
-  await Promise.resolve(3).then((r) => console.log(r));
+// async function first() {
+//   console.log(9);
+//   await Promise.resolve(2).then((r) => console.log(r));
+//   console.log(0);
+//   await Promise.resolve(3).then((r) => console.log(r));
+// }
+
+// async function second() {
+//   console.log(10);
+//   await Promise.resolve(4).then((r) => console.log(r));
+//   console.log(11);
+//   await Promise.resolve(5).then((r) => console.log(r));
+// }
+
+// first();
+// second();
+
+// const promises = Promise.resolve('new Promise');
+// promises.then((str) => console.log(str));
+
+// const wait = (time) => new Promise((res) => setTimeout(() => res(), time));
+
+// async function run() {
+//   await wait(1000);
+//   console.log(1);
+//   await wait(2000);
+//   console.log(2);
+//   await wait(3000);
+//   console.log(3);
+// }
+
+// run();
+
+const api = {
+  async save() {},
+  // async read() {
+  //   return { name: 'Pawel' };
+  // },
+  // read() {
+  //   return new Promise((res) => res({ name: 'Pawel' }));
+  // },
+  read() {
+    return Promise.resolve({ name: 'Pawel' });
+  },
+};
+
+async function run() {
+  await api.save();
+  console.log('saved');
+  let data = await api.read();
+  console.log('read: ', data);
 }
 
-async function second() {
-  console.log(10);
-  await Promise.resolve(4).then((r) => console.log(r));
-  console.log(11);
-  await Promise.resolve(5).then((r) => console.log(r));
-}
-
-first();
-second();
-
-const promises = Promise.resolve('new Promise');
-promises.then((str) => console.log(str));
+run();
