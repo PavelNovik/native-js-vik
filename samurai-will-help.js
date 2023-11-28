@@ -45,29 +45,48 @@
 // new (User.bind({ name: 'Hello' }))();
 // new User({ name: 'Hello' });
 
-function foo2() {
-  console.log(this);
-}
-foo2();
+// function foo2() {
+//   console.log(this);
+// }
+// foo2();
 
-const foo = (name) => {
-  // console.log(this);
-  this.name = name;
-  console.log(this.name);
+// const foo = (name) => {
+//   // console.log(this);
+//   this.name = name;
+//   console.log(this.name);
+// };
+// foo('alex');
+
+// const user1 = {
+//   name: 'Alex',
+//   hi() {
+//     console.log(this.name);
+//   },
+// };
+// user1.hi();
+
+// const user2 = {
+//   name: 'Alexia',
+//   hi: () => {
+//     console.log(this.name);
+//   },
+// };
+
+// Prototype
+
+const hanna = {
+  name: 'Hanna',
+  age: 33,
+  showName() {
+    console.log(this.name);
+  },
 };
-foo('alex');
 
-const user1 = {
+const alex = {
   name: 'Alex',
-  hi() {
-    console.log(this.name);
-  },
 };
-user1.hi();
 
-const user2 = {
-  name: 'Alexia',
-  hi: () => {
-    console.log(this.name);
-  },
-};
+alex.__proto__ = hanna;
+
+alex.showName();
+console.log(alex.age);
