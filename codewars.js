@@ -103,3 +103,156 @@
 //   //your code here
 //   return friends.filter((n) => n.length === 4);
 // }
+
+// decodeMorse = function (morseCode) {
+//   // Your code here
+//   // You can use MORSE_CODE[morse]
+//   const morseAlph = {
+//     '.-': 'a',
+//     '-...': 'b',
+//     '-.-.': 'c',
+//     '-..': 'd',
+//     '.': 'e',
+//     '..-.': 'f',
+//     '--.': 'g',
+//     '....': 'h',
+//     '..': 'i',
+//     '.---': 'j',
+//     '-.-': 'k',
+//     '.-..': 'l',
+//     '--': 'm',
+//     '-.': 'n',
+//     '---': 'o',
+//     '.--.': 'p',
+//     '--.-': 'q',
+//     '.-.': 'r',
+//     '...': 's',
+//     '-': 't',
+//     '..-': 'u',
+//     '...-': 'v',
+//     '.--': 'w',
+//     '-..-': 'x',
+//     '-.--': 'y',
+//     '--..': 'z',
+//     '.----': '1',
+//     '..---': '2',
+//     '...--': '3',
+//     '....-': '4',
+//     '.....': '5',
+//     '-....': '6',
+//     '--...': '7',
+//     '---..': '8',
+//     '----.': '9',
+//     '-----': '0',
+//   };
+
+//   return morseCode
+//     .trim()
+//     .split('  ')
+//     .map((w) =>
+//       w
+//         .trim()
+//         .split(' ')
+//         .map((ch) => morseAlph[ch])
+//         .join('')
+//     )
+//     .join(' ')
+//     .toUpperCase();
+// };
+
+// console.log(decodeMorse('.... . -.--   .--- ..- -.. .'));
+// console.log(decodeMorse('   .... . -.--   '));
+// console.log(MORSE_CODE['.--']);
+
+// function isPangram(string) {
+//   //...
+//   const set = new Set(
+//     string
+//       .toLowerCase()
+//       .split(' ')
+//       .join('')
+//       .split('')
+//       .filter((c) => c !== '.' && c !== ',' && !+c)
+//   );
+
+//   //   return set.size === 26;
+//   return set;
+// }
+
+// console.log(isPangram('The quick brown fox jumps over the lazy dog.'));
+// console.log(isPangram('This is not a pangram.'));
+// console.log(isPangram('ABCD45EFGH,IJK,LMNOPQR56STUVW3XYZ'));
+
+// function findEvenIndex(arr) {
+//   //Code goes here!
+//   let res = -1;
+//   let left = 0;
+//   let right = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let a = 0; a < i; a++) {
+//       left += arr[a];
+//     }
+//     for (let b = i + 1; b < arr.length; b++) {
+//       right += arr[b];
+//     }
+//     if (left === right) {
+//       res = i;
+//       return res;
+//     } else {
+//       left = 0;
+//       right = 0;
+//     }
+//   }
+//   return res;
+// }
+
+// // console.log(findEvenIndex([1, 2, 3, 4, 3, 2, 1]));
+// // console.log(findEvenIndex([1, 100, 50, -51, 1, 1]));
+// // console.log(findEvenIndex([1, 2, 3, 4, 5, 6]));
+// // console.log(findEvenIndex([20, 10, 30, 10, 10, 15, 35]));
+// console.log(findEvenIndex([20, 10, -80, 10, 10, 15, 35]));
+// // console.log();
+
+// function findUniq(arr) {
+//   const set = new Set(arr);
+//   // do magic
+//   //   return arr[
+//   //     arr.map((n, i, ar) => ar.filter((x) => x === n).length).indexOf(1)
+//   //   ];
+//   let res;
+//   set.forEach((el) => {
+//     if (arr.filter((n) => n === el).length === 1) {
+//       res = arr.indexOf(el);
+//     }
+//   });
+//   return arr[res];
+// }
+
+// console.log(findUniq([1, 0, 0]));
+// console.log(findUniq([0, 1, 0]));
+// console.log(findUniq([0, 0, 1]));
+// console.log(findUniq([1, 1, 1, 2, 1, 1]));
+// console.log(findUniq([1, 1, 2, 1, 1]));
+// console.log(findUniq([3, 10, 3, 3, 3]));
+// // console.log();
+
+function solution(str) {
+  const arr = str.split('');
+  //   console.log(arr.splice(0, 2));
+  //   console.log(arr);
+  const res = [];
+  while (arr.length > 0) {
+    if (arr.length >= 2) {
+      res.push(arr.splice(0, 2).join(''));
+    }
+    if (arr.length === 1) {
+      res.push(arr.splice(0, 1) + '_');
+    }
+  }
+  return res;
+}
+
+console.log(solution('abcdef'));
+console.log(solution('abcdefg'));
+console.log('');
