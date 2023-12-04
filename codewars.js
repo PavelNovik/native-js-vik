@@ -237,22 +237,34 @@
 // console.log(findUniq([3, 10, 3, 3, 3]));
 // // console.log();
 
-function solution(str) {
-  const arr = str.split('');
-  //   console.log(arr.splice(0, 2));
-  //   console.log(arr);
-  const res = [];
-  while (arr.length > 0) {
-    if (arr.length >= 2) {
-      res.push(arr.splice(0, 2).join(''));
-    }
-    if (arr.length === 1) {
-      res.push(arr.splice(0, 1) + '_');
-    }
-  }
-  return res;
+// function solution(str) {
+//   const arr = str.split('');
+//   //   console.log(arr.splice(0, 2));
+//   //   console.log(arr);
+//   const res = [];
+//   while (arr.length > 0) {
+//     if (arr.length >= 2) {
+//       res.push(arr.splice(0, 2).join(''));
+//     }
+//     if (arr.length === 1) {
+//       res.push(arr.splice(0, 1) + '_');
+//     }
+//   }
+//   return res;
+// }
+
+// console.log(solution('abcdef'));
+// console.log(solution('abcdefg'));
+// console.log('');
+
+function pigIt(str) {
+  //Code here
+  return str
+    .split(' ')
+    .map((w) => (w !== '!' ? w.substring(1) + w[0] + 'ay' : w))
+    .join(' ');
 }
 
-console.log(solution('abcdef'));
-console.log(solution('abcdefg'));
-console.log('');
+console.log(pigIt('Pig latin is cool'));
+console.log(pigIt('This is my string'));
+console.log(pigIt('O tempora o mores !'));
