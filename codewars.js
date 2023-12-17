@@ -257,14 +257,41 @@
 // console.log(solution('abcdefg'));
 // console.log('');
 
-function pigIt(str) {
-  //Code here
-  return str
-    .split(' ')
-    .map((w) => (w !== '!' ? w.substring(1) + w[0] + 'ay' : w))
-    .join(' ');
+// function pigIt(str) {
+//   //Code here
+//   return str
+//     .split(' ')
+//     .map((w) => (w !== '!' ? w.substring(1) + w[0] + 'ay' : w))
+//     .join(' ');
+// }
+
+// console.log(pigIt('Pig latin is cool'));
+// console.log(pigIt('This is my string'));
+// console.log(pigIt('O tempora o mores !'));
+
+// function getSum(a, b) {
+//   //Good luck!
+//   let res = 0;
+//   if (a === b) {
+//     return a;
+//   }
+//   let s = a > b ? b : a;
+//   let f = a > b ? a : b;
+//   for (let i = s; i <= f; i++) {
+//     res += i;
+//   }
+//   return res;
+// }
+
+// console.log(getSum(0, -1));
+// console.log(getSum(0, 1));
+// console.log(getSum(2, 2));
+
+function countSheeps(sheep) {
+  // TODO
+  return sheep.map((el) => (el ? 1 : 0)).reduce((acc, e) => acc + e, 0);
 }
 
-console.log(pigIt('Pig latin is cool'));
-console.log(pigIt('This is my string'));
-console.log(pigIt('O tempora o mores !'));
+console.log(
+  countSheeps([true, true, true, false, true, true, true, true, true])
+);
