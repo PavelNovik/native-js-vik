@@ -287,11 +287,59 @@
 // console.log(getSum(0, 1));
 // console.log(getSum(2, 2));
 
-function countSheeps(sheep) {
-  // TODO
-  return sheep.map((el) => (el ? 1 : 0)).reduce((acc, e) => acc + e, 0);
-}
+// function countSheeps(sheep) {
+//   // TODO
+//   return sheep.map((el) => (el ? 1 : 0)).reduce((acc, e) => acc + e, 0);
+// }
 
-console.log(
-  countSheeps([true, true, true, false, true, true, true, true, true])
-);
+// console.log(
+//   countSheeps([true, true, true, false, true, true, true, true, true])
+// );
+
+// function longest(s1, s2) {
+//   // your code
+//   const res = [];
+//   new Set(
+//     s1
+//       .concat(s2)
+//       .split('')
+//       .sort((a, b) => a.charCodeAt(0) - b.charCodeAt(0))
+//   ).forEach((k) => res.push(k));
+//   return res.join('');
+// }
+
+// console.log(longest('aretheyhere', 'yestheyarehere'));
+
+// const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
+
+// function basicOp(operation, value1, value2) {
+//   // Code
+//   switch (operation) {
+//     case '+':
+//       return value1 + value2;
+//     case '-':
+//       return value1 - value2;
+//     case '*':
+//       return value1 * value2;
+//     case '/':
+//       return value1 / value2;
+//     default:
+//       break;
+//   }
+// }
+
+// console.log(basicOp('+', 4, 7));
+// console.log(basicOp('-', 15, 18));
+// console.log(basicOp('*', 5, 5));
+// console.log(basicOp('/', 49, 7));
+
+// function basicOp(operation, value1, value2)
+// {
+//   var cases = {
+//     '+': value1 + value2,
+//     '-': value1 - value2,
+//     '*': value1 * value2,
+//     '/': value1 / value2
+//   };
+//   return cases[operation]
+// }
