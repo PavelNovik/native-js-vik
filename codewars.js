@@ -343,3 +343,51 @@
 //   };
 //   return cases[operation]
 // }
+var x = 100;
+
+function foo() {
+  const x = 10;
+
+  return {
+    x: 20,
+    bar: () => {
+      console.log(this.x);
+      console.log(this);
+    },
+    baz: function () {
+      console.log(this.x);
+      console.log(this);
+    },
+  };
+}
+
+const obj2 = foo.call({ x: 30 });
+// const obj3 = foo.bind({ x: 30 });
+// console.log(obj3);
+// obj2.bar();
+// obj2.baz();
+
+let y = obj2.bar;
+let z = obj2.baz;
+
+y();
+z();
+
+// true + false
+// 12 / "6"
+// "number" + 15 + 3
+// 15 + 3 + "number"
+// [1] > null
+// "foo" + + "bar"
+// 'true' == true
+// false == 'false'
+// null == ''
+// !!"false" == !!"true"
+// [‘x’] == ‘x’
+// [] + null + 1
+// [1,2,3] == [1,2,3]
+// console.log({} + [] + {} + [1]);
+// console.log(!+[] + [] + ![]);
+console.log(new Date(0) - 0);
+console.log(new Date(0) + 0);
+console.log(typeof (new Date(0) + 0));
