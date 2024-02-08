@@ -343,35 +343,35 @@
 //   };
 //   return cases[operation]
 // }
-var x = 100;
+// var x = 100;
 
-function foo() {
-  const x = 10;
+// function foo() {
+//   const x = 10;
 
-  return {
-    x: 20,
-    bar: () => {
-      console.log(this.x);
-      console.log(this);
-    },
-    baz: function () {
-      console.log(this.x);
-      console.log(this);
-    },
-  };
-}
+//   return {
+//     x: 20,
+//     bar: () => {
+//       console.log(this.x);
+//       console.log(this);
+//     },
+//     baz: function () {
+//       console.log(this.x);
+//       console.log(this);
+//     },
+//   };
+// }
 
-const obj2 = foo.call({ x: 30 });
-// const obj3 = foo.bind({ x: 30 });
-// console.log(obj3);
-// obj2.bar();
-// obj2.baz();
+// const obj2 = foo.call({ x: 30 });
+// // const obj3 = foo.bind({ x: 30 });
+// // console.log(obj3);
+// // obj2.bar();
+// // obj2.baz();
 
-let y = obj2.bar;
-let z = obj2.baz;
+// let y = obj2.bar;
+// let z = obj2.baz;
 
-y();
-z();
+// y();
+// z();
 
 // true + false
 // 12 / "6"
@@ -388,6 +388,82 @@ z();
 // [1,2,3] == [1,2,3]
 // console.log({} + [] + {} + [1]);
 // console.log(!+[] + [] + ![]);
-console.log(new Date(0) - 0);
-console.log(new Date(0) + 0);
-console.log(typeof (new Date(0) + 0));
+// console.log(new Date(0) - 0);
+// console.log(new Date(0) + 0);
+// console.log(typeof (new Date(0) + 0));
+
+// function addBinary(a, b) {
+//   return (a + b).toString(2);
+// }
+
+// console.log(addBinary(1, 1));
+
+// function nbYear(p0, percent, aug, p) {
+//   // your code
+//   let countYears = 0;
+//   while (p >= p0) {
+//     p0 += Math.floor((p0 * percent) / 100 + aug);
+//     countYears++;
+//   }
+//   return countYears;
+// }
+// console.log(nbYear(1500, 5, 100, 5000));
+// console.log(nbYear(1500000, 2.5, 10000, 2000000));
+// console.log(nbYear(1000, 2, 50, 1200));
+
+// function litres(time) {
+//   return Math.floor(time / 2);
+// }
+
+// function solution(str, ending) {
+//   // TODO: complete
+
+//   // return str.lastIndexOf(ending);
+//   return str.substring(str.length - ending.length) === ending;
+// }
+
+// console.log(solution('abcde', 'cde'));
+// console.log(solution('abcde', 'abc'));
+
+// function isTriangle(a, b, c) {
+//   let ab = a + b;
+//   let bc = b + c;
+//   let ac = a + c;
+//   return ab > c && bc > a && ac > b;
+// }
+
+// console.log(isTriangle(1, 2, 2));
+// console.log(isTriangle(7, 2, 2));
+// console.log('kk');
+
+// function digitize(n) {
+//   //code here
+//   return n
+//     .toString()
+//     .split('')
+//     .reverse()
+//     .map((e) => +e);
+// }
+
+// console.log(digitize(35231));
+// console.log(digitize(0));
+// console.log();
+
+// function greet(name) {
+//   return `Hello, ${name} how are you doing today?`;
+// }
+
+12;
+
+// function fixTheMeerkat(arr) {
+//   //your code here
+//   return [arr[2], arr[1], arr[0]];
+// }
+
+// function strCount(str, letter) {
+//   return str.split('').filter((l) => l === letter).length;
+// }
+
+// function invert(array) {
+//   return array.map((n) => -n);
+// }
