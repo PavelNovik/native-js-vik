@@ -467,3 +467,15 @@
 // function invert(array) {
 //   return array.map((n) => -n);
 // }
+
+// function flickSwitch(arr) {
+//   let flick = true;
+//   return arr.map((el) => {
+//     if (el === 'flick') flick = !flick;
+//     return flick;
+//   });
+// }
+
+function cubeChecker(volume, side) {
+  return side !== 0 && side * side * side === volume && volume > 0;
+}
