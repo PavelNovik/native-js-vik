@@ -889,8 +889,8 @@ function bubble(arr) {
   let res = [];
   let s = true;
   let x;
-  
-  while (s) do {
+
+  while (s) {
     // s = true;
     console.log('iter');
     for (let i = 0; i < arr.length - 1; i++) {
