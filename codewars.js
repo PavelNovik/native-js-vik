@@ -885,29 +885,99 @@
 //   })
 // );
 
-function bubble(arr) {
-  let res = [];
-  let s = true;
-  let x;
+// function bubble(arr) {
+//   let res = [];
+//   let s = true;
+//   let x;
 
-  while (s) {
-    // s = true;
-    console.log('iter');
-    for (let i = 0; i < arr.length - 1; i++) {
-      if (arr[i] > arr[i + 1]) {
-        s = false;
-        x = arr[i + 1];
-        arr[i + 1] = arr[i];
-        arr[i] = x;
-        res = [...res, [...arr]];
-      }
-    }
-    console.log(s);
-  }
+//   while (s) {
+//     // s = true;
+//     console.log('iter');
+//     for (let i = 0; i < arr.length - 1; i++) {
+//       if (arr[i] > arr[i + 1]) {
+//         s = false;
+//         x = arr[i + 1];
+//         arr[i + 1] = arr[i];
+//         arr[i] = x;
+//         res = [...res, [...arr]];
+//       }
+//     }
+//     console.log(s);
+//   }
 
-  return res;
+//   return res;
+// }
+
+// console.log(bubble([1, 2, 4, 3]));
+// console.log(bubble([2, 1, 4, 3]));
+// console.log(bubble([1, 4, 3, 6, 7, 9, 2, 5, 8]));
+// console.log('Hello muther fucker!');
+
+// function moveTen(s) {
+//   return s
+//     .split('')
+//     .map((a) => {
+//       num = a.charCodeAt() + 10;
+
+//       return num <= 122
+//         ? String.fromCharCode(num)
+//         : String.fromCharCode(num - 26);
+//     })
+//     .join('');
+// }
+
+// console.log(moveTen('codewars'));
+console.log('Bomb has been planted!');
+
+const map1 = [
+  ['CT', '0', '0', '0', '0', '0', '0'],
+  ['0', '0', '0', '0', '0', '0', '0'],
+  ['0', '0', '0', '0', '0', '0', '0'],
+  ['0', '0', '0', '0', '0', '0', '0'],
+  ['0', '0', '0', '0', '0', '0', '0'],
+  ['0', '0', '0', '0', '0', '0', '0'],
+  ['0', '0', '0', '0', '0', '0', '0'],
+  ['0', '0', '0', '0', '0', '0', 'B'],
+];
+function bombHasBeenPlanted(map, time) {}
+
+console.log(bombHasBeenPlanted(map1, 7));
+
+console.log('Matryoska');
+
+function matryoshka(lst) {
+  // Can the lists be nested?
 }
 
-console.log(bubble([1, 2, 4, 3]));
-console.log(bubble([2, 1, 4, 3]));
-console.log(bubble([1, 4, 3, 6, 7, 9, 2, 5, 8]));
+// console.log('Contamination string');
+
+// function contamination(text, char) {
+//   return text.length !== 0 ? char.repeat(text.length) : '';
+// }
+// console.log(contamination('_3ebzgh4', '&'));
+// console.log(contamination('//case', ' '));
+
+// console.log('Formatting data for 2 digit after point');
+
+// function twoDecimalPlaces(n) {
+//   return +n.toFixed(2);
+// }
+// console.log(twoDecimalPlaces(4.659725356));
+// console.log(twoDecimalPlaces(173735326.3783732637948948));
+// console.log(twoDecimalPlaces(4.653725356));
+
+// console.log('The smallest power higher than a given a value');
+
+// function findNextPower(val, pow_) {
+//   let a = 1;
+//   while (Math.pow(a, pow_) <= val) {
+//     a++;
+//   }
+//   return Math.pow(a, pow_);
+// }
+
+// console.log(findNextPower(8, 3));
+// console.log(findNextPower(12385, 3));
+// console.log(findNextPower(1245678, 5));
+// console.log(findNextPower(1245678, 6));
+// console.log(findNextPower(4782969, 7));
